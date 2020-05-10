@@ -39,7 +39,7 @@
           <Double fx:value="-60.0" />
         </points>
       </Polygon>
-      <Polygon fx:id="triDown" fill="DODGERBLUE" layoutX="445.0" layoutY="259.0" rotate="180.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="117.0">
+      <Polygon fx:id="triDown" fill="DODGERBLUE" layoutX="449.0" layoutY="259.0" rotate="180.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="399.0" AnchorPane.rightAnchor="281.0">
          <points>
             <Double fx:value="-50.0" />
             <Double fx:value="40.0" />
