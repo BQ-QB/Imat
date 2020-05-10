@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imgBild" fitHeight="389.0" fitWidth="417.0" layoutX="151.0" layoutY="127.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/0db02ac202f9179abe1a233c4f83bf0e.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff513b" height="94.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="417.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d0d0dae" height="128.0" layoutY="258.0" stroke="TRANSPARENT" strokeType="INSIDE" width="417.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text fill="WHITE" layoutX="154.13671875" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köp:" wrappingWidth="51.13671875" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="154.13671875" AnchorPane.rightAnchor="211.7265625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="164.0" layoutY="452.328125" strokeType="OUTSIDE" strokeWidth="0.0" text="för: " AnchorPane.bottomAnchor="25.65234375" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="218.25390625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Polygon fx:id="triUp" fill="DODGERBLUE" layoutX="214.0" layoutY="423.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="153.0">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon fx:id="triDown" fill="DODGERBLUE" layoutX="272.0" layoutY="420.0" rotate="180.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="222.0" AnchorPane.rightAnchor="95.0">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <ImageView fx:id="imgIcon" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/2da2e16451525841dbb2bf9ab0379a71.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblPrice" layoutX="210.0" layoutY="430.0" prefHeight="24.0" prefWidth="67.0" text="14.99kr" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNum" layoutX="234.0" layoutY="400.0" prefHeight="27.0" prefWidth="20.0" text="0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGram" layoutX="315.0" layoutY="305.0" text="200g" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblKrPer" layoutX="21.0" layoutY="343.0" prefHeight="24.0" prefWidth="67.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDes" layoutX="21.0" layoutY="310.0" text="Saker" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNamn" layoutX="128.0" layoutY="278.0" text="Namn på produkt" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
