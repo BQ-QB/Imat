@@ -58,7 +58,9 @@
 
 }
 
-
+.button:hover {
+    -fx-cursor: hand;
+}
 
   .green_button {
         -fx-background-color: #aacfd7;

@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane fx:id="register_pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@i_Mat.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="register_pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@i_Mat.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <ImageView fx:id="buyIMatImageview" fitHeight="82.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
@@ -28,18 +28,18 @@
                <items>
                   <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="70.0" prefWidth="1165.0" styleClass="pane-color">
                      <children>
-                        <Label fx:id="buy_idinvarukorg_label" layoutX="205.0" layoutY="15.0" prefWidth="200.0" text="I din varukorg:" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0" />
+                        <Label fx:id="buy_idinvarukorg_label" layoutX="205.0" layoutY="15.0" prefWidth="200.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0" />
                         <Label fx:id="buy_sorteraefter_label" layoutX="195.0" layoutY="15.0" text="Sortera efter:" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="585.0" AnchorPane.topAnchor="0.0" />
-                        <JFXButton fx:id="buy_kategori_knapp" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" text="Pris" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="10.0" />
-                        <JFXButton fx:id="buy_pris_knapp" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="10.0" />
-                        <JFXButton fx:id="buy_inkopslista_button" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                        <JFXButton fx:id="buy_kategori_knapp" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#sortKategoriButton" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" text="Pris" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="10.0" />
+                        <JFXButton fx:id="buy_pris_knapp" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#sortPrisButton" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="10.0" />
+                        <JFXButton fx:id="buy_inkopslista_button" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#sortInkopslistaButton" prefHeight="50.0" prefWidth="180.0" styleClass="green_button" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
                      </children>
                   </AnchorPane>
                   <StackPane prefHeight="930.0" prefWidth="1155.0" styleClass="pane-color">
                      <children>
-                        <JFXScrollPane fx:id="buy" styleClass="deep-pane-color">
+                        <JFXScrollPane fx:id="buyKlumpScrollpane" styleClass="deep-pane-color">
                            <children>
-                              <FlowPane prefHeight="200.0" prefWidth="200.0" styleClass="deep-pane-color" />
+                              <FlowPane fx:id="buyKlumpFlowpane" prefHeight="200.0" prefWidth="200.0" styleClass="deep-pane-color" />
                            </children>
                            <StackPane.margin>
                               <Insets />
@@ -62,7 +62,7 @@
                         <AnchorPane prefHeight="65.0" prefWidth="200.0" styleClass="top-bar" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
                            <children>
                               <Label styleClass="text-white-thirty" text="Att betala" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0" />
-                              <Label styleClass="text-white-thirty" text="89:90kr" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
+                              <Label fx:id="buyAttbetalaLabel" styleClass="text-white-thirty" text="89:90kr" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                         <JFXScrollPane AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
@@ -74,40 +74,43 @@
                   </AnchorPane>
                   <StackPane prefHeight="1010.0" prefWidth="755.0">
                      <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="pane-color" />
+                        <AnchorPane fx:id="buyAndraadressPlatta" prefHeight="200.0" prefWidth="200.0" styleClass="pane-color" />
+                        <AnchorPane fx:id="buyAndrabetalningsmetodPlatta" prefHeight="200.0" prefWidth="200.0" styleClass="pane-color" />
+                        <AnchorPane fx:id="buyAndraleveransPlatta" prefHeight="200.0" prefWidth="200.0" styleClass="pane-color" />
+                        <AnchorPane fx:id="buyAndratelefonnummerPlatta" prefHeight="200.0" prefWidth="200.0" styleClass="pane-color" />
                         <AnchorPane fx:id="buyBasbetalningsplattaAnchorpane" prefHeight="200.0" prefWidth="200.0" styleClass="pane-color">
                            <children>
-                              <Label text="Du bor på Klaravägen 29" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="10.0">
+                              <Label fx:id="buyCurrentadressLabel" text="Du bor på Klaravägen 29" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="10.0">
                                  <styleClass>
                                     <String fx:value="text-left" />
                                     <String fx:value="text-20" />
                                  </styleClass>
                               </Label>
-                              <JFXButton text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+                              <JFXButton fx:id="buyAndraadressButton" onAction="#changeAdressButton" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
                                  <styleClass>
                                     <String fx:value="green_button" />
                                     <String fx:value="small_button" />
                                  </styleClass>
                               </JFXButton>
-                              <Label text="Din valda betalningsmetod är Swish" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0">
+                              <Label fx:id="buyCurrentbetalningsmetodLabel" text="Din valda betalningsmetod är Swish" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0">
                                  <styleClass>
                                     <String fx:value="text-left" />
                                     <String fx:value="text-20" />
                                  </styleClass>
                               </Label>
-                              <JFXButton layoutX="10.0" layoutY="10.0" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+                              <JFXButton fx:id="buyAndrabetalningsmetodButton" layoutX="10.0" layoutY="10.0" onAction="#changeBetalningsmetodButton" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
                                  <styleClass>
                                     <String fx:value="green_button" />
                                     <String fx:value="small_button" />
                                  </styleClass>
                               </JFXButton>
-                              <Label layoutX="10.0" layoutY="10.0" text="Leveransen kommer anlända Måndag 12:00 - 15:00" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.0">
+                              <Label fx:id="buyCurrentleveranstidLabel" layoutX="10.0" layoutY="10.0" text="Leveransen kommer anlända Måndag 12:00 - 15:00" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.0">
                                  <styleClass>
                                     <String fx:value="text-left" />
                                     <String fx:value="text-20" />
                                  </styleClass>
                               </Label>
-                              <JFXButton layoutX="20.0" layoutY="20.0" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
+                              <JFXButton fx:id="buyAndraLeveransmetod" layoutX="20.0" layoutY="20.0" onAction="#changeLeveransmetodButton" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
                                  <styleClass>
                                     <String fx:value="green_button" />
                                     <String fx:value="small_button" />
@@ -118,19 +121,19 @@
                                     <Insets left="30.0" right="30.0" />
                                  </padding>
                               </Separator>
-                              <JFXButton layoutX="10.0" layoutY="10.0" maxHeight="20.0" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0">
+                              <JFXButton fx:id="buyAndraTelefonnummer" layoutX="10.0" layoutY="10.0" maxHeight="20.0" onAction="#changeTelefonnummerButton" text="ändra" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="150.0">
                                  <styleClass>
                                     <String fx:value="green_button" />
                                     <String fx:value="small_button" />
                                  </styleClass>
                               </JFXButton>
-                              <Label text="Telefonnummer för betalning +46711 345899" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
+                              <Label fx:id="buyCurrenttelefonnummerLabel" text="Telefonnummer för betalning +46711 345899" wrapText="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
                                  <styleClass>
                                     <String fx:value="text-left" />
                                     <String fx:value="text-20" />
                                  </styleClass>
                               </Label>
-                              <JFXButton prefHeight="65.0" styleClass="orange_button" text="Gå vidare till betalning" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+                              <JFXButton fx:id="buy_vidare_knapp" onAction="#VidareButton" prefHeight="65.0" styleClass="orange_button" text="Gå vidare till betalning" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
                            </children>
                         </AnchorPane>
                      </children>
