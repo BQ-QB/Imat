@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imgBild" fitHeight="295.0" fitWidth="335.0" layoutX="151.0" layoutY="127.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/0db02ac202f9179abe1a233c4f83bf0e.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff513b" height="94.0" layoutX="335.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" width="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="335.0" AnchorPane.rightAnchor="0.0" />
+      <Text fill="WHITE" layoutX="154.13671875" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köp:" wrappingWidth="51.13671875" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="154.13671875" AnchorPane.rightAnchor="211.7265625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="164.0" layoutY="452.328125" strokeType="OUTSIDE" strokeWidth="0.0" text="för: " AnchorPane.bottomAnchor="25.65234375" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="218.25390625">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Polygon fx:id="triUp" fill="DODGERBLUE" layoutX="378.0" layoutY="258.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="328.0" AnchorPane.rightAnchor="327.0">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon fx:id="triDown" fill="DODGERBLUE" layoutX="445.0" layoutY="259.0" rotate="180.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="117.0">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <ImageView fx:id="imgIcon" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/2da2e16451525841dbb2bf9ab0379a71.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="411.0" layoutY="234.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="358.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="523.0" layoutY="233.0" text="för" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="233.0" prefHeight="30.0" prefWidth="115.0" text="14:90kr" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="imgKöpCardName" layoutX="364.0" layoutY="27.0" prefHeight="35.0" prefWidth="260.0" text="Namn">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="87.0" text="Des">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="148.0" text="1000:00 kr/st">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="87.0" text="400g">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
