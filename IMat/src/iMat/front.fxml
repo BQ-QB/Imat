@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="1060.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1060.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="980.0" prefWidth="1610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+
       <SplitPane dividerPositions="0.1578" prefHeight="681.0" prefWidth="1071.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1058.0" prefWidth="300.0">
@@ -107,5 +102,42 @@
             </AnchorPane>
         </items>
       </SplitPane>
+
+      <AnchorPane layoutX="3.0" layoutY="1.0" prefHeight="980.0" prefWidth="1610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="990.0" stroke="BLACK" strokeType="INSIDE" width="1610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="640.0" layoutX="-48.0" layoutY="-12.0" stroke="BLACK" strokeType="INSIDE" width="1080.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+            <ImageView fitHeight="640.0" fitWidth="1080.0" pickOnBounds="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="460.0" layoutX="1314.0" layoutY="146.0" stroke="BLACK" strokeType="INSIDE" width="460.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+            <ImageView fitHeight="460.0" fitWidth="460.0" pickOnBounds="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="420.0" layoutX="1178.0" layoutY="514.0" stroke="BLACK" strokeType="INSIDE" width="460.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+            <ImageView fitHeight="420.0" fitWidth="460.0" pickOnBounds="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="240.0" layoutX="810.0" layoutY="714.0" stroke="BLACK" strokeType="INSIDE" width="525.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
+            <ImageView fitHeight="240.0" fitWidth="525.0" pickOnBounds="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="240.0" layoutX="820.0" layoutY="724.0" stroke="BLACK" strokeType="INSIDE" width="525.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="585.0" />
+            <ImageView fitHeight="240.0" fitWidth="525.0" pickOnBounds="true" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="585.0">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+
    </children>
 </AnchorPane>
