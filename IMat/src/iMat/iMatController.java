@@ -7,9 +7,12 @@ import java.util.*;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXScrollPane;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -20,6 +23,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.*;
 
 
@@ -27,6 +31,7 @@ public class iMatController implements Initializable {
 
     IMatDataHandler db = IMatDataHandler.getInstance();
     iMATBackendController controller = new iMATBackendController();
+    Head_categories categories = new Head_categories();
 
     @FXML
     private AnchorPane product_description_pane;
@@ -49,6 +54,8 @@ public class iMatController implements Initializable {
 
     @FXML
     private TextField search_field;
+    @FXML
+    private Pane replace_pane;
 
     //tillhörande kassan
     @FXML
@@ -106,18 +113,24 @@ public class iMatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeCheckOut();
-
+        replace_pane.getChildren().add(new Button("Yes"));
 
 
     }
+
 
     @FXML
     public void handleEnterPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER && search_field.getLength() > 0) {
 
+
         }
     }
-
+    @FXML
+    public void AddButton(ActionEvent event)
+    {
+        replace_pane.getChildren().add(new Button("Yes"));
+    }
 
 
     @FXML

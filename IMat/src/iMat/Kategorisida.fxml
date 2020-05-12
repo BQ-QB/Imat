@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -100,7 +103,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="247.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.leftAnchor="655.0" AnchorPane.rightAnchor="655.0" AnchorPane.topAnchor="47.0" />
       <Pane layoutX="65.0" layoutY="132.0" prefHeight="793.0" prefWidth="1520.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="91.0" AnchorPane.topAnchor="132.0">
          <children>
-            <ListView layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1460.0" />
+            <ListView fx:id="productview" layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1460.0" />
          </children>
       </Pane>
       <Label fx:id="productCategory" layoutX="824.0" layoutY="65.0" text="Något" AnchorPane.leftAnchor="788.0" AnchorPane.rightAnchor="788.0" AnchorPane.topAnchor="65.0" />

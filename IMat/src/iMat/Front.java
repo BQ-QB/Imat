@@ -16,15 +16,15 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Kategorisida extends AnchorPane {
+public class Front extends AnchorPane {
 
-    @FXML private ListView productview;
+
 
     private iMatController controller;
     private ProductCategory productCategory;
-    private Map<String, MiniKlump> productListItemMap = new HashMap<String, MiniKlump>();
-    Kategorisida(ProductCategory category, iMatController controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Kategorisida.fxml"));
+
+    Front(iMatController controller){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Front.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -34,17 +34,10 @@ public class Kategorisida extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.controller = controller;
-        this.productCategory = category;
-        for (Product product : controller.controller.getProducts()) {
-            productListItemMap.put(product.getImageName(), new MiniKlump(new ShoppingItem(product), controller));
-        }
+
 
     }
-    public void update()
-    {
-        for(Product product : controller.categories.getProducts(Category_head.DRINKS))
-        {
-            productview.getItems().add(productListItemMap.get(product.getName()));
-        }
-    }
+
+
+
 }

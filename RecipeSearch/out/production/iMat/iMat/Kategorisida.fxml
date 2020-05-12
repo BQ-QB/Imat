@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="1060.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1060.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minWidth="-Infinity" prefHeight="980.0" prefWidth="1610.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.12356621480709072" prefHeight="681.0" prefWidth="1071.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -76,7 +76,7 @@
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="247.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="47.0" />
                                     <Pane layoutX="58.0" layoutY="132.0" prefHeight="781.0" prefWidth="1586.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="132.0">
                                        <children>
-                                          <ListView layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1595.0" />
+                                          <ListView fx:id="productlist_pane" layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1595.0" />
                                        </children>
                                     </Pane>
                                     <Label fx:id="productCategory" layoutX="824.0" layoutY="65.0" text="Något" />
@@ -90,5 +90,22 @@
             </AnchorPane>
          </items>
       </SplitPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="980.0" layoutX="16.0" layoutY="-14.0" stroke="BLACK" strokeType="INSIDE" width="1610.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" text="Tillbaka" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/iMat_templogga.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="247.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.leftAnchor="655.0" AnchorPane.rightAnchor="655.0" AnchorPane.topAnchor="47.0" />
+      <Pane layoutX="65.0" layoutY="132.0" prefHeight="793.0" prefWidth="1520.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="91.0" AnchorPane.topAnchor="132.0">
+         <children>
+            <ListView fx:id="productview" layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1460.0" />
+         </children>
+      </Pane>
+      <Label fx:id="productCategory" layoutX="824.0" layoutY="65.0" text="Något" AnchorPane.leftAnchor="788.0" AnchorPane.rightAnchor="788.0" AnchorPane.topAnchor="65.0" />
    </children>
 </AnchorPane>
