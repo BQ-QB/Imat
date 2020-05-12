@@ -76,7 +76,7 @@
                                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="53.0" layoutX="247.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="300.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="688.0" AnchorPane.topAnchor="47.0" />
                                     <Pane layoutX="58.0" layoutY="132.0" prefHeight="781.0" prefWidth="1586.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="132.0">
                                        <children>
-                                          <ListView fx:id="productlist_pane" layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1595.0" />
+                                          <ListView layoutX="-5.0" layoutY="-3.0" prefHeight="789.0" prefWidth="1595.0" />
                                        </children>
                                     </Pane>
                                     <Label fx:id="productCategory" layoutX="824.0" layoutY="65.0" text="Något" />
