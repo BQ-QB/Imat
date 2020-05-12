@@ -21,11 +21,10 @@ public class Kategorisida extends AnchorPane {
     @FXML private ListView productview;
 
     private iMatController controller;
-    private ProductCategory productCategory;
+    private Category_head productCategory;
     private Map<String, MiniKlump> productListItemMap = new HashMap<String, MiniKlump>();
-    Kategorisida(ProductCategory category, iMatController controller){
+    Kategorisida(Category_head category, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Kategorisida.fxml"));
-        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {
@@ -38,11 +37,11 @@ public class Kategorisida extends AnchorPane {
         for (Product product : controller.controller.getProducts()) {
             productListItemMap.put(product.getImageName(), new MiniKlump(new ShoppingItem(product), controller));
         }
-
+        update();
     }
     public void update()
     {
-        for(Product product : controller.categories.getProducts(Category_head.DRINKS))
+        for(Product product : controller.controller.getProducts())
         {
             productview.getItems().add(productListItemMap.get(product.getName()));
         }

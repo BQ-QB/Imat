@@ -25,7 +25,6 @@ public class Front extends AnchorPane {
 
     Front(iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Front.fxml"));
-        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {

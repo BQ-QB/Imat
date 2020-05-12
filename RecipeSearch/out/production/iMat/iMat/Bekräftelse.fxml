@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXListView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1040.0" prefWidth="1920.0" style="-fx-background-color: #077187#077187;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="140.0" layoutY="70.0" prefHeight="940.0" prefWidth="1678.0" style="-fx-background-color: #AACFD7#AACFD7;">
+      <AnchorPane layoutX="140.0" layoutY="110.0" prefHeight="908.0" prefWidth="1678.0" style="-fx-background-color: #AACFD7#AACFD7;">
          <children>
             <Label layoutX="450.0" layoutY="30.0" text="Tack för din beställning!">
                <font>
@@ -23,7 +23,7 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="1012.0" layoutY="245.0" prefHeight="48.0" prefWidth="358.0" text="Ditt ordernummer:">
+            <Label layoutX="264.0" layoutY="283.0" prefHeight="43.0" prefWidth="358.0" text="Ditt ordernummer:">
                <font>
                   <Font size="35.0" />
                </font>
@@ -34,38 +34,27 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="320.12554931640625" minHeight="10.0" prefHeight="249.8624267578125" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="604.0" minHeight="10.0" prefHeight="520.1375732421875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="447.059326171875" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
-               <children>
-                  <ScrollPane prefHeight="402.0" prefWidth="838.0" GridPane.rowIndex="1">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="556.0" prefWidth="837.0">
-                           <children>
-                              <JFXListView prefHeight="565.0" prefWidth="835.0" style="-fx-background-color: #AACFD7#AACFD7 #AACFD7#AACFD7;" />
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
-               </children>
             </GridPane>
-            <Label layoutX="1012.0" layoutY="350.0" prefHeight="43.0" prefWidth="370.0" text="Beräknad leveranstid:">
+            <Label layoutX="1090.0" layoutY="283.0" prefHeight="43.0" prefWidth="370.0" text="Beräknad leveranstid:">
                <font>
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="730.0" layoutY="250.0" prefHeight="43.0" prefWidth="100.0" text="Pris">
+            <Label layoutX="730.0" layoutY="600.0" prefHeight="43.0" prefWidth="100.0" text="Pris">
                <font>
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="450.0" layoutY="250.0" prefHeight="43.0" prefWidth="150.0" text="Produkt">
+            <Label layoutX="450.0" layoutY="600.0" prefHeight="43.0" prefWidth="150.0" text="Produkt">
                <font>
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="260.0" layoutY="250.0" prefHeight="43.0" prefWidth="100.0" text="Antal">
+            <Label layoutX="260.0" layoutY="600.0" prefHeight="43.0" prefWidth="100.0" text="Antal">
                <font>
                   <Font size="35.0" />
                </font>
@@ -75,11 +64,11 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="1012.0" layoutY="300.0" text="Label">
+            <Label layoutX="1090.0" layoutY="350.0" text="Label">
                <font>
                   <Font size="24.0" />
                </font></Label>
-            <Label layoutX="1012.0" layoutY="400.0" text="Label">
+            <Label layoutX="264.0" layoutY="350.0" text="Label">
                <font>
                   <Font size="24.0" />
                </font>
@@ -94,17 +83,17 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="1012.0" layoutY="450.0" prefHeight="43.0" prefWidth="370.0" text="Varorna skickas till:">
-               <font>
-                  <Font size="35.0" />
-               </font>
-            </Label>
-            <Label layoutX="1012.0" layoutY="500.0" text="Label">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screen%20Shot%202020-05-09%20at%206.08.55%20PM.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="140.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Screen%20Shot%202020-05-09%20at%206.10.55%20PM.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

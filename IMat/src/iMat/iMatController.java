@@ -40,7 +40,7 @@ public class iMatController implements Initializable {
     iMATBackendController controller = new iMATBackendController();
     Head_categories categories = new Head_categories();
     iMatControllerBuyFrame buyFrameController = new iMatControllerBuyFrame(this);
-    static SkalProductCategory skalProductCategory = new SkalProductCategory();
+    //static SkalProductCategory skalProductCategory = new SkalProductCategory();
 
     @FXML
     private AnchorPane product_description_pane;
@@ -64,19 +64,7 @@ public class iMatController implements Initializable {
     @FXML private Label food_label;
     @FXML private ImageView food_image;
     @FXML private AnchorPane product_pane;
-    @FXML private AnchorPane product_description_pane;
-    @FXML private AnchorPane cart_pane;
-    @FXML private AnchorPane shoppingcart_page_pane;
-    @FXML private AnchorPane register_pane1;
-    @FXML private AnchorPane register_pane2;
-    @FXML private AnchorPane register_pane3;
-    @FXML private AnchorPane front_pane;
-    @FXML private AnchorPane root_pane;
-    @FXML private ListView product_category_list;
     @FXML private ListView products;
-
-
-
 
     private Map<String, MiniKlump> productListItemMap = new HashMap<String, MiniKlump>();
 
@@ -96,11 +84,14 @@ public class iMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        initializeCheckOut();
-        replace_pane.getChildren().add(new Button("Yes"));
+
+        replace_pane.getChildren().add(new Kategorisida(Category_head.DRINKS,this));
+        replace_pane.getChildren().add(new Button("YES"));
 
 
 
+
+        /*
         //lyssnare till iMatControllerBuyFrame
         buyFrameController.buy_vidare_knapp.onActionProperty().addListener(new ChangeListener<EventHandler<ActionEvent>>() {
             @Override
@@ -111,11 +102,11 @@ public class iMatController implements Initializable {
         buyFrameController.buy_pris_knapp.onActionProperty().addListener(new ChangeListener<EventHandler<ActionEvent>>() {
             @Override
             public void changed(ObservableValue<? extends EventHandler<ActionEvent>> observableValue, EventHandler<ActionEvent> actionEventEventHandler, EventHandler<ActionEvent> t1) {
-                buyFrameController.populateByRow(sortByPris(), "pris");
+                //buyFrameController.populateByRow(sortByPris(), "pris");
 
             }
         });
-
+*/
 
     }
 

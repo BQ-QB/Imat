@@ -88,7 +88,7 @@ public class iMatControllerBuyFrame {
     //sorterar lägsta pris med lägst index
 
 
-    public void populateByRow(List<ShoppingItem> list, String method){
+    /*public void populateByRow(List<ShoppingItem> list, String method){
         buyKlumpScrollpane.getChildren().clear();
         if (method == "kategori"){
             ProductCategory nowCat = ProductCategory.POD;
@@ -106,7 +106,7 @@ public class iMatControllerBuyFrame {
         for(ShoppingItem item : list){
             buyKlumpFlowpane.getChildren().add(new MiniKlump(item, controller));
         }
-    }
+    }*/
 
 //eventuellt överflödigt
 /***
@@ -129,7 +129,7 @@ public class iMatControllerBuyFrame {
     public void initializeCheckOut(){
         test.go(controller);
         //här: inled med att byta så att denna panen är längst fram alternativ ladda ny fxml
-        populateByRow(controller.db.getShoppingCart().getItems(), "kategori");
+        //populateByRow(controller.db.getShoppingCart().getItems(), "kategori");
         ;
         //sätta etiketter:
         Date date = new Date();

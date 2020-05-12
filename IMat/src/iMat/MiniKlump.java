@@ -17,7 +17,7 @@ public class MiniKlump extends AnchorPane {
     private ShoppingItem item;
     MiniKlump(ShoppingItem item, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("card_köp.fxml"));
-        fxmlLoader.setRoot(this);
+
         fxmlLoader.setController(this);
 
         try {
@@ -27,7 +27,7 @@ public class MiniKlump extends AnchorPane {
         }
         this.controller = controller;
         this.item = item;
-        this.imgBild.setImage(new Image(getClass().getClassLoader().getResourceAsStream(item.getProduct().getImageName())));
+        this.imgBild.setImage(new Image(getClass().getResourceAsStream(item.getProduct().getImageName())));
 
     }
 }
