@@ -80,7 +80,7 @@ public class iMatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeCheckOut();
-        for()
+        
 
     }
     private void populateProductDetailView(Product product) {
