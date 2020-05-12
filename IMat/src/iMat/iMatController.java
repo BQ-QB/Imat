@@ -3,9 +3,7 @@ package iMat;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXScrollPane;
@@ -16,6 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
@@ -37,6 +37,7 @@ public class iMatController implements Initializable {
     @FXML private AnchorPane register_pane2;
     @FXML private AnchorPane register_pane3;
     @FXML private AnchorPane front_pane;
+    @FXML private AnchorPane root_pane;
     @FXML private ListView product_category_list;
     @FXML private ListView products;
 
@@ -67,6 +68,8 @@ public class iMatController implements Initializable {
     @FXML private JFXButton buyAndradressButton;
 
 
+    private Map<String, MiniKlump> productListItemMap = new HashMap<String, MiniKlump>();
+
 
 
 
@@ -77,6 +80,8 @@ public class iMatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeCheckOut();
+        for()
+
     }
     private void populateProductDetailView(Product product) {
         food_label.setText(product.getName());
@@ -116,30 +121,13 @@ public class iMatController implements Initializable {
         }
         return sortedList;
     }
-//card_köp miniklump is
-    public class MiniKlump extends AnchorPane{
-        @FXML ImageView imgBild;
 
-        private iMatController controller;
-        private ShoppingItem item;
-        MiniKlump(ShoppingItem item, iMatController controller){
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("card_köp.fxml"));
-            fxmlLoader.setRoot(this);
-            fxmlLoader.setController(this);
+    @FXML
+    public void handleEnterPressed(KeyEvent event){
+    if (event.getCode() == KeyCode.ENTER) {
 
-            try {
-                fxmlLoader.load();
-            } catch (IOException exception) {
-                throw new RuntimeException(exception);
-            }
-            this.controller = controller;
-            this.item = item;
-            this.imgBild.setImage(new Image(getClass().getClassLoader().getResourceAsStream(item.getProduct().getImageName())));
-
-        }
     }
-
-
+}
     private void populateByRow(ArrayList<ShoppingItem> list, String method){
         buyKlumpScrollpane.getChildren().clear();
         if (method == "kategori"){

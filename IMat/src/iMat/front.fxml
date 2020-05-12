@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
-<AnchorPane maxHeight="1060.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1060.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root_pane" maxHeight="1060.0" maxWidth="1920.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1060.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.12356621480709072" prefHeight="681.0" prefWidth="1071.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -40,7 +39,7 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="828.0">
                            <children>
-                              <TextArea layoutX="14.0" layoutY="19.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="693.0" text="Sök..." AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="19.0">
+                              <TextArea fx:id="search_field" layoutX="14.0" layoutY="19.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="693.0" text="Sök..." AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="19.0">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
