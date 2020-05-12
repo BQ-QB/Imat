@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imgBild" fitHeight="170.0" fitWidth="170.0" layoutX="151.0" layoutY="127.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/0db02ac202f9179abe1a233c4f83bf0e.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff513b" height="56.0" layoutX="170.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" />
+      <Polygon fx:id="triUp" fill="DODGERBLUE" layoutX="220.0" layoutY="149.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="250.0">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon fx:id="triDown" fill="DODGERBLUE" layoutX="288.0" layoutY="152.0" rotate="180.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="-22.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="182.0">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <ImageView fx:id="imgIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../bilder%20till%20pro/2da2e16451525841dbb2bf9ab0379a71.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="245.0" layoutY="124.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="264.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="127.0" text="för" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="127.0" prefHeight="30.0" prefWidth="115.0" text="14:90kr" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="imgKöpCardName" layoutX="178.0" layoutY="7.0" prefHeight="35.0" prefWidth="167.0" text="Namn" AnchorPane.leftAnchor="178.0" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="44.0" text="Des">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="74.0" text="1000:00 kr/st">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="44.0" text="400g">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
