@@ -28,6 +28,7 @@
             </ImageView>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="420.0" layoutX="1178.0" layoutY="514.0" stroke="BLACK" strokeType="INSIDE" width="460.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" />
             <ImageView fx:id="min_sida" fitHeight="420.0" fitWidth="460.0" pickOnBounds="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+            </ImageView>
             <ImageView fitHeight="302.0" fitWidth="460.0" pickOnBounds="true" AnchorPane.bottomAnchor="148.0" AnchorPane.rightAnchor="30.0">
 
                <image>
