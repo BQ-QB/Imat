@@ -75,6 +75,7 @@ public class iMatController implements Initializable {
     @FXML
     private Pane replace_pane;
 
+    private Kategorisida kategorisida = new Kategorisida(Category_head.DRYCKER, this);
 
 
 
@@ -85,8 +86,8 @@ public class iMatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        replace_pane.getChildren().add(new Kategorisida(Category_head.DRINKS,this));
-        replace_pane.getChildren().add(new Button("YES"));
+
+
 
 
 
@@ -115,6 +116,10 @@ public class iMatController implements Initializable {
     public void handleEnterPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER && search_field.getLength() > 0) {
 
+            kategorisida.update(search_field.getCharacters().toString());
+            Pane pane = kategorisida;
+            replace_pane.getChildren().clear();
+            replace_pane.getChildren().add(pane);
 
         }
     }
